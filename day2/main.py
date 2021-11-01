@@ -71,8 +71,8 @@
 
 #ENTRADAS DO PROGRAMA
 print("Welcome to the tip calculator")
-valor = float(input("Qual o valor total da conta ? R$"))
-gorgeta_bruta = int(input( "Valor da gorgeta sera de 10/12/15 ? "))
+valor = float(input("What the value to pay ? R$"))
+gorgeta_bruta = int(input( "How much tip would you like to give? 10/12/15 ? "))
 pagoes = int(input("How many people to split the bill?"))
 
 #Calcula o valor da gorgeta e apresenta o valor total
@@ -81,7 +81,7 @@ valor_total = ( valor + (( gorgeta_bruta / 100 ) * valor))
 # print(valor_total)
 # print(type(valor_total))
 
-#Calcula o valor total a ser pago e apresenta em tela
+#Calcula o valor total a ser pago e apresenta em tela, e ajusta a mesma variavel para entregar sempre dois decimais no final
 valor_final = round(valor_total / pagoes, 2)
 valor_final = "{:.2f}".format(valor_final)
 mensagem_final = f"Each person should pay: ${valor_final} reais"
