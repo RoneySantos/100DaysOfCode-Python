@@ -69,21 +69,42 @@
 
 ## Each person should pay (150.00 / 5 ) * 1.12
 
-#ENTRADAS DO PROGRAMA
-print("Welcome to the tip calculator")
-valor = float(input("What the value to pay ? R$"))
-gorgeta_bruta = int(input( "How much tip would you like to give? 10/12/15 ? "))
-pagoes = int(input("How many people to split the bill?"))
+# #ENTRADAS DO PROGRAMA
+# print("Welcome to the tip calculator")
+# valor = float(input("What the value to pay ? R$"))
+# gorgeta_bruta = int(input( "How much tip would you like to give? 10/12/15 ? "))
+# pagoes = int(input("How many people to split the bill?"))
 
-#Calcula o valor da gorgeta e apresenta o valor total
-#gorgeta = ( gorgeta_bruta / 100 ) * valor
-valor_total = ( valor + (( gorgeta_bruta / 100 ) * valor))
-# print(valor_total)
-# print(type(valor_total))
+# #Calcula o valor da gorgeta e apresenta o valor total
+# #gorgeta = ( gorgeta_bruta / 100 ) * valor
+# valor_total = ( valor + (( gorgeta_bruta / 100 ) * valor))
+# # print(valor_total)
+# # print(type(valor_total))
 
 #Calcula o valor total a ser pago e apresenta em tela, e ajusta a mesma variavel para entregar sempre dois decimais no final
-valor_final = round(valor_total / pagoes, 2)
-valor_final = "{:.2f}".format(valor_final)
-mensagem_final = f"Each person should pay: ${valor_final} reais"
-print(mensagem_final)
+# valor_final = round(valor_total / pagoes, 2)
+# valor_final = "{:.2f}".format(valor_final)
+# mensagem_final = f"Each person should pay: ${valor_final} reais"
+# print(mensagem_final)
 
+# 🚨 Don't change the code below 👇
+height = float(input("enter your height in m: "))
+weight = float(input("enter your weight in kg: "))
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+
+bmi_result = weight / (height * height)
+# bmi = round(weight / height ** 2)
+# bmi_result = 28
+
+if ( bmi_result < 18.5 ):
+    print(f"Your BMI is {bmi_result}, you are underweight.")
+elif ( bmi_result < 25 ):
+    print(f"Your BMI is {bmi_result}, you have a normal weight.")
+elif ( bmi_result < 30 ):
+    print(f"Your BMI is {bmi_result}, you are slightly overweight.")
+elif ( bmi_result < 35 ): 
+    print(f"Your BMI is {bmi_result}, you are obese.")
+else: 
+    print(f"Your BMI is {bmi_result}, you are clinically obese.")
